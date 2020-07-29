@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Celo - share secrets the easy way</title>
+  <meta name="description" content="Celo is a way to share passwords securely">
+  <meta name="author" content="unitato">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </head>
+
+<body>
+  <div class="app-content">
+    <div class="app-header text-center"><h2>celo - share secrets the easy way</h2></div>
+
+    <div class="app-description text-center padding4">Here you can share secrets securely (i.e. passwords, api-keys, etc) securely. Just let your secret encrypt, get a sharing link and give that one to your mate... That's all you need to do! The link can only be opened once within the allowed timeframe, after which it will self-expire.  </div>
+
+
+    <form id="rendered-form" action="encrypt" >
+      <div class="rendered-form">
+         <div class="formbuilder-textarea form-group field-textarea-1596005481044 text-center">
+           <label for="textarea-1596005481044" class="formbuilder-textarea-label"><strong>Message to encrypt:</strong></label>
+           <textarea type="textarea" placeholder="Please type your secret here" class="form-control app-textarea" name="textarea-1596005481044" access="false" id="textarea-1596005481044" title="This could be anything that needs encryption" required="required" aria-required="true"></textarea>
+         </div>
+         <div class="spacer">  </div>
+
+         <div class="formbuilder-radio-group form-group field-radio-group-1596005680818 text-center">
+            <label for="radio-group-1596005680818" class="formbuilder-radio-group-label"><strong>When should the secret expire?</strong></label>
+            <div class="radio-group">
+              <label class="radio-inline"><input type="radio" name="retention" required="required" aria-required="true" value="1" checked>One Hour</label>
+              <label class="radio-inline"><input type="radio" name="retention" required="required" aria-required="true" value="6">Six Hours</label>
+              <label class="radio-inline"><input type="radio" name="retention" required="required" aria-required="true" value="24">One Day (24 Hours)</label>
+              <label class="radio-inline"><input type="radio" name="retention" required="required" aria-required="true" value="72">Three Days (72 Hours)</label>
+              <label class="radio-inline"><input type="radio" name="retention" required="required" aria-required="true" value="168">One Week</label>
+            </div>
+         </div>
+
+         <div class="text-center"><button type="submit" class="btn btn-primary btn-lg">Encrypt</button></div>
+
+    </form>
+
+
+
+    <div class="app-footer text-center">	&copy;celo. All rights reserved. | <a href="#">privacy policy</a></div>
+
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
