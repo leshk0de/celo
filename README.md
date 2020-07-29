@@ -1,2 +1,2 @@
 # celo
-a secret sharing project built on gcp
+a secret sharing app built on gcp microservices.
