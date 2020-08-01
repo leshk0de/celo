@@ -15,7 +15,7 @@ def get_index(request):
     request_json = request.get_json()
     if request.args and 'message' in request.args:
         return request.args.get('message')
-    elif request_json and 'message' in request_json:
-        return request_json['message']
+    elif request_json and 'view' in request_json:
+        return render_template('view.html', decrypted_message="this is the decrypted message")
     else:
-        return render_template('index.html')
+        return render_template('index.html', debuggy=request)
