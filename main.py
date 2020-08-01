@@ -17,5 +17,7 @@ def get_index(request):
         return request.args.get('message')
     elif request_json and 'view' in request_json:
         return render_template('view.html', decrypted_message="this is the decrypted message")
+    elif request.args and 'textarea-1596005481044' in request.args:
+        return render_template('index.html', debuggy=request.args)
     else:
         return render_template('index.html', debuggy=request_json)
