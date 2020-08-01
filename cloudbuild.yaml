@@ -7,5 +7,5 @@ steps:
   args: [-c, 'pytest']
   dir: '/'
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'celo', '--trigger-http', '--runtime', 'python37', '--entry-point', 'get_index']
+  args: ['functions', 'deploy', 'celo', '--trigger-http', '--runtime', 'python37', '--entry-point', 'get_index', '--source', 'https://source.developers.google.com/projects/celo-284808/repos/github_unitato_celo']
   dir: '/'
