@@ -18,4 +18,4 @@ def get_index(request):
     elif request_json and 'view' in request_json:
         return render_template('view.html', decrypted_message="this is the decrypted message")
     else:
-        return render_template('index.html', debuggy=request)
+        return render_template('index.html', debuggy=request_json)
